@@ -1,0 +1,22 @@
+
+# Messages from "go new"
+
+# Info: Branching solution 'solution.v4' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v4' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v4' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v4' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v4' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v4' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v3' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v3' at state 'initial' (PRJ-2)
+# Info: Branching solution 'solution.v2' at state 'initial' (PRJ-2)
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v4': elapsed time 0.04 seconds, memory usage 1521060kB, peak memory usage 1521060kB (SOL-9)
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+Front End called with arguments: -- /home/dss545/small_projects/fir_filter/fir_filter/fir_filter2.h /home/dss545/small_projects/fir_filter/fir_filter/fir_filter3.c /home/dss545/small_projects/fir_filter/fir_filter/fir_filter2.c (CIN-69)
+Source file analysis completed (CIN-68)
+solution design set fir1 -top (HC-8)
+# Warning: Integer directive values of OPT_CONST_MULTS directive is deprecated (SIF-14)
+# Info: Starting transformation 'analyze' on solution 'solution.v4' (SOL-8)

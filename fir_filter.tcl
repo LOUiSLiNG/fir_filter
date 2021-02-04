@@ -20,9 +20,9 @@ solution options defaults
 solution options set /Input/TargetPlatform x86_64
 #solution options set /Output/GenerateCycleNetlist true
 flow package require /SCVerify
-solution file add ./fir_filter/fir_filter.c -type C++
-solution file add ./fir_filter/fir_filter_tb.c -type C++ -exclude true
-solution file add ./fir_filter/fir_filter.h -type C++
+solution file add ./fir_filter.c -type C++
+solution file add ./fir_filter_tb.c -type C++ -exclude true
+solution file add ./fir_filter.h -type C++
 directive set -PROTOTYPING_ENGINE oasys
 directive set -DESIGN_GOAL area
 directive set -SPECULATE true

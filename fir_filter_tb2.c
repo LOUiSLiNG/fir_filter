@@ -1,9 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "fir_filter2.h"
+#include "mc_scverify.h"
 #include <math.h>
 #define N 10
-int main() {
+
+CCS_MAIN(int argc, char *argv[]) {
+//int main() {
 //	int in[N] = {0, 13, 50, 100, 250, 45, 56, -22, 0, -11};
 //	int in[N];
 //	int out[N];
@@ -33,9 +36,15 @@ int main() {
 	int in2[N] = {0, 13, 50, 100, 250, 45, 56, -22, 0, -11};
 	int out2;
 	for(j = 0; j < N; j++) {
-		out1 = fir1(in2[N]);
-		out2 = fir2(in2[N]);
+		//out1 = fir1(in2[j]);
+		out1 = CCS_DESIGN(fir1)(in2[j]);
+		out2 = fir2(in2[j]);
+		if(out1 != out2) {
+		    printf("Error in the code: %d != %d\n", out1, out2);
+		    return -1;
+		}
 	}
+	return 0;
 }	          
                   
                   
