@@ -14,10 +14,12 @@
 //                       CDS_OASYS v20.1_2.2, CDS_PSR v20.1_0.0, 
 //                       DesignPad v2.78_1.0
 //
+project new -name auto_fir_filter2 
 #project new -name fir_filter  
 solution new -state initial
 solution options defaults
 solution options set /Input/TargetPlatform x86_64
+options set Input/CompilerFlags {-DCATAPULT -DENCRYPTION}
 #solution options set /Output/GenerateCycleNetlist true
 flow package require /SCVerify
 solution file add ./fir_filter2.c -type C++
@@ -66,7 +68,7 @@ directive set -CLUSTER_FAST_MODE false
 directive set -CLUSTER_TYPE combinational
 directive set -PIPELINE_RAMP_UP true
 go new
-solution design set fir1 -top
+solution design set fir2 -top
 directive set -REGISTER_SHARING_LIMIT 1
 # directive set -TIMING_CHECKS false
 
@@ -106,3 +108,6 @@ go allocate
 go extract
 #flow run /Vivado/synthesize -shell vivado_concat_v/concat_rtl.v.xv
 flow run /SCVerify/launch_make ./scverify/Verify_concat_sim_rtl_v_msim.mk {} SIMTOOL=msim sim
+project save
+project close
+quit

@@ -1,0 +1,849 @@
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+//------------------------------------------------------------------------------
+// Catapult Synthesis - Sample I/O Port Library
+//
+// Copyright (c) 2003-2017 Mentor Graphics Corp.
+//       All Rights Reserved
+//
+// This document may be used and distributed without restriction provided that
+// this copyright statement is not removed from the file and that any derivative
+// work contains this copyright notice.
+//
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in preparation for creating
+// their own custom interfaces. This design does not necessarily present a 
+// complete implementation of the named protocol or standard.
+//
+//------------------------------------------------------------------------------
+
+
+module ccs_in_v1 (idat, dat);
+
+  parameter integer rscid = 1;
+  parameter integer width = 8;
+
+  output [width-1:0] idat;
+  input  [width-1:0] dat;
+
+  wire   [width-1:0] idat;
+
+  assign idat = dat;
+
+endmodule
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v 
+//------------------------------------------------------------------------------
+// Catapult Synthesis - Sample I/O Port Library
+//
+// Copyright (c) 2003-2019 Mentor Graphics Corp.
+//       All Rights Reserved
+//
+// This document may be used and distributed without restriction provided that
+// this copyright statement is not removed from the file and that any derivative
+// work contains this copyright notice.
+//
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in preparation for creating
+// their own custom interfaces. This design does not necessarily present a 
+// complete implementation of the named protocol or standard.
+//
+//------------------------------------------------------------------------------
+
+
+module mgc_inout_prereg_en_v1 (din, ldout, dout, zin, lzout, zout);
+
+    parameter integer rscid = 1;
+    parameter integer width = 8;
+
+    output [width-1:0] din;
+    input              ldout;
+    input  [width-1:0] dout;
+    input  [width-1:0] zin;
+    output             lzout;
+    output [width-1:0] zout;
+
+    wire   [width-1:0] din;
+    wire               lzin;
+    wire               lzout;
+    wire   [width-1:0] z;
+
+    assign lzout = ldout;
+    assign din = zin;
+    assign zout = dout;
+
+endmodule
+
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_out_v1.v 
+//------------------------------------------------------------------------------
+// Catapult Synthesis - Sample I/O Port Library
+//
+// Copyright (c) 2003-2015 Mentor Graphics Corp.
+//       All Rights Reserved
+//
+// This document may be used and distributed without restriction provided that
+// this copyright statement is not removed from the file and that any derivative
+// work contains this copyright notice.
+//
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in preparation for creating
+// their own custom interfaces. This design does not necessarily present a 
+// complete implementation of the named protocol or standard.
+//
+//------------------------------------------------------------------------------
+
+module ccs_out_v1 (dat, idat);
+
+  parameter integer rscid = 1;
+  parameter integer width = 8;
+
+  output   [width-1:0] dat;
+  input    [width-1:0] idat;
+
+  wire     [width-1:0] dat;
+
+  assign dat = idat;
+
+endmodule
+
+
+
+
+//------> /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+//------------------------------------------------------------------------------
+// Catapult Synthesis - Sample I/O Port Library
+//
+// Copyright (c) 2003-2017 Mentor Graphics Corp.
+//       All Rights Reserved
+//
+// This document may be used and distributed without restriction provided that
+// this copyright statement is not removed from the file and that any derivative
+// work contains this copyright notice.
+//
+// The design information contained in this file is intended to be an example
+// of the functionality which the end user may study in preparation for creating
+// their own custom interfaces. This design does not necessarily present a 
+// complete implementation of the named protocol or standard.
+//
+//------------------------------------------------------------------------------
+
+
+module mgc_io_sync_v2 (ld, lz);
+    parameter valid = 0;
+
+    input  ld;
+    output lz;
+
+    wire   lz;
+
+    assign lz = ld;
+
+endmodule
+
+
+//------> ../td_ccore_solutions/ROM_1i4_1o8_67a60b90ba118081e4925479fe39390ab2_0/rtl.v 
+// ----------------------------------------------------------------------
+//  HLS HDL:        Verilog Netlister
+//  HLS Version:    10.5c/896140 Production Release
+//  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
+// 
+//  Generated by:   dss545@hansolo.poly.edu
+//  Generated date: Wed Feb  3 19:35:57 2021
+// ----------------------------------------------------------------------
+
+// 
+// ------------------------------------------------------------------
+//  Design Unit:    ROM_1i4_1o8_67a60b90ba118081e4925479fe39390ab2
+// ------------------------------------------------------------------
+
+
+module ROM_1i4_1o8_67a60b90ba118081e4925479fe39390ab2 (
+  I_1, O_1
+);
+  input [3:0] I_1;
+  output [7:0] O_1;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign O_1 = MUX_v_8_11_2x0(8'b00000000, 8'b11101001, 8'b00000000, 8'b01001110,
+      8'b01111101, 8'b01001110, 8'b00000000, 8'b11101001, 8'b00000000, 8'b00001101,
+      I_1);
+
+  function automatic [7:0] MUX_v_8_11_2x0;
+    input [7:0] input_1;
+    input [7:0] input_2;
+    input [7:0] input_3;
+    input [7:0] input_4;
+    input [7:0] input_5;
+    input [7:0] input_6;
+    input [7:0] input_7;
+    input [7:0] input_8;
+    input [7:0] input_9;
+    input [7:0] input_10;
+    input [3:0] sel;
+    reg [7:0] result;
+  begin
+    case (sel)
+      4'b0001 : begin
+        result = input_1;
+      end
+      4'b0010 : begin
+        result = input_2;
+      end
+      4'b0011 : begin
+        result = input_3;
+      end
+      4'b0100 : begin
+        result = input_4;
+      end
+      4'b0101 : begin
+        result = input_5;
+      end
+      4'b0110 : begin
+        result = input_6;
+      end
+      4'b0111 : begin
+        result = input_7;
+      end
+      4'b1000 : begin
+        result = input_8;
+      end
+      4'b1001 : begin
+        result = input_9;
+      end
+      default : begin
+        result = input_10;
+      end
+    endcase
+    MUX_v_8_11_2x0 = result;
+  end
+  endfunction
+
+endmodule
+
+
+
+
+//------> ../td_ccore_solutions/ROM_1i4_1o1_a981173f914bc276eca7f42d28616f0ab2_0/rtl.v 
+// ----------------------------------------------------------------------
+//  HLS HDL:        Verilog Netlister
+//  HLS Version:    10.5c/896140 Production Release
+//  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
+// 
+//  Generated by:   dss545@hansolo.poly.edu
+//  Generated date: Wed Feb  3 19:36:04 2021
+// ----------------------------------------------------------------------
+
+// 
+// ------------------------------------------------------------------
+//  Design Unit:    ROM_1i4_1o1_a981173f914bc276eca7f42d28616f0ab2
+// ------------------------------------------------------------------
+
+
+module ROM_1i4_1o1_a981173f914bc276eca7f42d28616f0ab2 (
+  I_1, O_1
+);
+  input [3:0] I_1;
+  output O_1;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  assign O_1 = MUX_s_1_11_2x0(1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0,
+      1'b1, I_1);
+
+  function automatic [0:0] MUX_s_1_11_2x0;
+    input [0:0] input_1;
+    input [0:0] input_2;
+    input [0:0] input_3;
+    input [0:0] input_4;
+    input [0:0] input_5;
+    input [0:0] input_6;
+    input [0:0] input_7;
+    input [0:0] input_8;
+    input [0:0] input_9;
+    input [0:0] input_10;
+    input [3:0] sel;
+    reg [0:0] result;
+  begin
+    case (sel)
+      4'b0001 : begin
+        result = input_1;
+      end
+      4'b0010 : begin
+        result = input_2;
+      end
+      4'b0011 : begin
+        result = input_3;
+      end
+      4'b0100 : begin
+        result = input_4;
+      end
+      4'b0101 : begin
+        result = input_5;
+      end
+      4'b0110 : begin
+        result = input_6;
+      end
+      4'b0111 : begin
+        result = input_7;
+      end
+      4'b1000 : begin
+        result = input_8;
+      end
+      4'b1001 : begin
+        result = input_9;
+      end
+      default : begin
+        result = input_10;
+      end
+    endcase
+    MUX_s_1_11_2x0 = result;
+  end
+  endfunction
+
+endmodule
+
+
+
+
+//------> ./rtl.v 
+// ----------------------------------------------------------------------
+//  HLS HDL:        Verilog Netlister
+//  HLS Version:    10.5c/896140 Production Release
+//  HLS Date:       Sun Sep  6 22:45:38 PDT 2020
+// 
+//  Generated by:   dss545@hansolo.poly.edu
+//  Generated date: Tue Feb  9 18:39:23 2021
+// ----------------------------------------------------------------------
+
+// 
+// ------------------------------------------------------------------
+//  Design Unit:    fir1_core_core_fsm
+//  FSM Module
+// ------------------------------------------------------------------
+
+
+module fir1_core_core_fsm (
+  clk, rst, fsm_output, for_C_2_tr0
+);
+  input clk;
+  input rst;
+  output [6:0] fsm_output;
+  reg [6:0] fsm_output;
+  input for_C_2_tr0;
+
+
+  // FSM State Type Declaration for fir1_core_core_fsm_1
+  parameter
+    main_C_0 = 3'd0,
+    for_C_0 = 3'd1,
+    for_C_1 = 3'd2,
+    for_C_2 = 3'd3,
+    main_C_1 = 3'd4,
+    main_C_2 = 3'd5,
+    main_C_3 = 3'd6;
+
+  reg [2:0] state_var;
+  reg [2:0] state_var_NS;
+
+
+  // Interconnect Declarations for Component Instantiations 
+  always @(*)
+  begin : fir1_core_core_fsm_1
+    case (state_var)
+      for_C_0 : begin
+        fsm_output = 7'b0000010;
+        state_var_NS = for_C_1;
+      end
+      for_C_1 : begin
+        fsm_output = 7'b0000100;
+        state_var_NS = for_C_2;
+      end
+      for_C_2 : begin
+        fsm_output = 7'b0001000;
+        if ( for_C_2_tr0 ) begin
+          state_var_NS = main_C_1;
+        end
+        else begin
+          state_var_NS = for_C_0;
+        end
+      end
+      main_C_1 : begin
+        fsm_output = 7'b0010000;
+        state_var_NS = main_C_2;
+      end
+      main_C_2 : begin
+        fsm_output = 7'b0100000;
+        state_var_NS = main_C_3;
+      end
+      main_C_3 : begin
+        fsm_output = 7'b1000000;
+        state_var_NS = main_C_0;
+      end
+      // main_C_0
+      default : begin
+        fsm_output = 7'b0000001;
+        state_var_NS = for_C_0;
+      end
+    endcase
+  end
+
+  always @(posedge clk) begin
+    if ( rst ) begin
+      state_var <= main_C_0;
+    end
+    else begin
+      state_var <= state_var_NS;
+    end
+  end
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    fir1_core
+// ------------------------------------------------------------------
+
+
+module fir1_core (
+  clk, rst, x_rsc_dat, x_rsc_triosy_lz, shift_reg_rsc_zout, shift_reg_rsc_lzout,
+      shift_reg_rsc_zin, shift_reg_rsc_triosy_lz, return_rsc_dat, return_rsc_triosy_lz
+);
+  input clk;
+  input rst;
+  input [31:0] x_rsc_dat;
+  output x_rsc_triosy_lz;
+  output [351:0] shift_reg_rsc_zout;
+  output shift_reg_rsc_lzout;
+  input [351:0] shift_reg_rsc_zin;
+  output shift_reg_rsc_triosy_lz;
+  output [31:0] return_rsc_dat;
+  output return_rsc_triosy_lz;
+
+
+  // Interconnect Declarations
+  wire [31:0] x_rsci_idat;
+  wire [351:0] shift_reg_rsci_din;
+  reg [31:0] return_rsci_idat;
+  reg return_rsc_triosy_obj_ld;
+  wire [6:0] fsm_output;
+  wire and_19_cse;
+  reg for_slc_for_acc_4_itm;
+  reg [3:0] i_3_0_sva;
+  reg reg_shift_reg_rsc_triosy_obj_ld_cse;
+  wire [31:0] for_slc_shift_reg_32_31_0_ncse_sva_1;
+  wire for_equal_tmp_10;
+  wire for_equal_tmp_11;
+  wire for_equal_tmp_12;
+  wire for_equal_tmp_13;
+  wire for_equal_tmp_14;
+  wire for_equal_tmp_15;
+  wire for_equal_tmp_16;
+  wire for_equal_tmp_17;
+  wire for_equal_tmp_18;
+  reg [31:0] x_sva;
+  wire [31:0] z_out;
+  wire [32:0] nl_z_out;
+  reg [31:0] acc_2_sva;
+  reg [3:0] for_acc_1_cse_1_sva;
+  reg [31:0] for_slc_shift_reg_32_31_0_ncse_sva;
+  reg [7:0] for_slc_C_rom_1_for_slc_i_3_0_tmp_9_8_1_1_sva;
+  reg for_slc_C_rom_1_for_slc_i_3_0_tmp_9_0_1_sva;
+  reg [31:0] acc_2_sva_1;
+  wire [3:0] for_acc_1_cse_1_sva_1;
+  wire [4:0] nl_for_acc_1_cse_1_sva_1;
+  wire [7:0] ROM_1i4_1o8_3106bdac892fcba6b8e810136c5fc7fd2e_1;
+  wire ROM_1i4_1o1_04cc3276c127ea0e308702c30762117d2e_1;
+  reg [31:0] reg_for_mul_cse;
+  wire signed [42:0] nl_reg_for_mul_cse;
+
+  wire[0:0] acc_not_2_nl;
+  wire[4:0] for_acc_nl;
+  wire[5:0] nl_for_acc_nl;
+  wire[7:0] for_mux_8_nl;
+  wire[0:0] for_for_or_1_nl;
+  wire[31:0] for_mux_9_nl;
+  wire[31:0] mux_5_nl;
+
+  // Interconnect Declarations for Component Instantiations 
+  wire [0:0] nl_shift_reg_rsci_ldout;
+  assign nl_shift_reg_rsci_ldout = and_19_cse | (fsm_output[1]);
+  wire[319:0] for_mux_2_nl;
+  wire[31:0] for_for_mux_nl;
+  wire[31:0] for_for_mux_1_nl;
+  wire[31:0] for_for_mux_2_nl;
+  wire[31:0] for_for_mux_3_nl;
+  wire[31:0] for_for_mux_4_nl;
+  wire[31:0] for_for_mux_5_nl;
+  wire[31:0] for_for_mux_6_nl;
+  wire[31:0] for_for_mux_7_nl;
+  wire[31:0] for_for_mux_8_nl;
+  wire[31:0] for_for_mux_9_nl;
+  wire[0:0] for_or_nl;
+  wire[31:0] for_mux_1_nl;
+  wire [351:0] nl_shift_reg_rsci_dout;
+  assign for_for_mux_nl = MUX_v_32_2_2((shift_reg_rsci_din[351:320]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_10);
+  assign for_for_mux_1_nl = MUX_v_32_2_2((shift_reg_rsci_din[319:288]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_11);
+  assign for_for_mux_2_nl = MUX_v_32_2_2((shift_reg_rsci_din[287:256]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_12);
+  assign for_for_mux_3_nl = MUX_v_32_2_2((shift_reg_rsci_din[255:224]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_13);
+  assign for_for_mux_4_nl = MUX_v_32_2_2((shift_reg_rsci_din[223:192]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_14);
+  assign for_for_mux_5_nl = MUX_v_32_2_2((shift_reg_rsci_din[191:160]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_15);
+  assign for_for_mux_6_nl = MUX_v_32_2_2((shift_reg_rsci_din[159:128]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_16);
+  assign for_for_mux_7_nl = MUX_v_32_2_2((shift_reg_rsci_din[127:96]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_17);
+  assign for_for_mux_8_nl = MUX_v_32_2_2((shift_reg_rsci_din[95:64]), for_slc_shift_reg_32_31_0_ncse_sva_1,
+      for_equal_tmp_18);
+  assign for_or_nl = for_equal_tmp_18 | for_equal_tmp_17 | for_equal_tmp_16 | for_equal_tmp_15
+      | for_equal_tmp_14 | for_equal_tmp_13 | for_equal_tmp_12 | for_equal_tmp_11
+      | for_equal_tmp_10 | (~((i_3_0_sva==4'b0001)));
+  assign for_for_mux_9_nl = MUX_v_32_2_2(for_slc_shift_reg_32_31_0_ncse_sva_1, (shift_reg_rsci_din[63:32]),
+      for_or_nl);
+  assign for_mux_2_nl = MUX_v_320_2_2(({for_for_mux_nl , for_for_mux_1_nl , for_for_mux_2_nl
+      , for_for_mux_3_nl , for_for_mux_4_nl , for_for_mux_5_nl , for_for_mux_6_nl
+      , for_for_mux_7_nl , for_for_mux_8_nl , for_for_mux_9_nl}), (shift_reg_rsci_din[351:32]),
+      fsm_output[3]);
+  assign for_mux_1_nl = MUX_v_32_2_2((shift_reg_rsci_din[31:0]), x_sva, fsm_output[3]);
+  assign nl_shift_reg_rsci_dout = {for_mux_2_nl , for_mux_1_nl};
+  wire [0:0] nl_fir1_core_core_fsm_inst_for_C_2_tr0;
+  assign nl_fir1_core_core_fsm_inst_for_C_2_tr0 = ~ for_slc_for_acc_4_itm;
+  ccs_in_v1 #(.rscid(32'sd1),
+  .width(32'sd32)) x_rsci (
+      .dat(x_rsc_dat),
+      .idat(x_rsci_idat)
+    );
+  mgc_inout_prereg_en_v1 #(.rscid(32'sd2),
+  .width(32'sd352)) shift_reg_rsci (
+      .din(shift_reg_rsci_din),
+      .ldout(nl_shift_reg_rsci_ldout[0:0]),
+      .dout(nl_shift_reg_rsci_dout[351:0]),
+      .zin(shift_reg_rsc_zin),
+      .lzout(shift_reg_rsc_lzout),
+      .zout(shift_reg_rsc_zout)
+    );
+  ccs_out_v1 #(.rscid(32'sd3),
+  .width(32'sd32)) return_rsci (
+      .idat(return_rsci_idat),
+      .dat(return_rsc_dat)
+    );
+  mgc_io_sync_v2 #(.valid(32'sd0)) x_rsc_triosy_obj (
+      .ld(reg_shift_reg_rsc_triosy_obj_ld_cse),
+      .lz(x_rsc_triosy_lz)
+    );
+  mgc_io_sync_v2 #(.valid(32'sd0)) shift_reg_rsc_triosy_obj (
+      .ld(reg_shift_reg_rsc_triosy_obj_ld_cse),
+      .lz(shift_reg_rsc_triosy_lz)
+    );
+  mgc_io_sync_v2 #(.valid(32'sd0)) return_rsc_triosy_obj (
+      .ld(return_rsc_triosy_obj_ld),
+      .lz(return_rsc_triosy_lz)
+    );
+  ROM_1i4_1o8_67a60b90ba118081e4925479fe39390ab2  U_ROM_1i4_1o8_3106bdac892fcba6b8e810136c5fc7fd2e_rg
+      (
+      .I_1(i_3_0_sva),
+      .O_1(ROM_1i4_1o8_3106bdac892fcba6b8e810136c5fc7fd2e_1)
+    );
+  ROM_1i4_1o1_a981173f914bc276eca7f42d28616f0ab2  U_ROM_1i4_1o1_04cc3276c127ea0e308702c30762117d2e_rg
+      (
+      .I_1(i_3_0_sva),
+      .O_1(ROM_1i4_1o1_04cc3276c127ea0e308702c30762117d2e_1)
+    );
+  fir1_core_core_fsm fir1_core_core_fsm_inst (
+      .clk(clk),
+      .rst(rst),
+      .fsm_output(fsm_output),
+      .for_C_2_tr0(nl_fir1_core_core_fsm_inst_for_C_2_tr0[0:0])
+    );
+  assign for_slc_shift_reg_32_31_0_ncse_sva_1 = MUX_v_32_10_2((shift_reg_rsci_din[31:0]),
+      (shift_reg_rsci_din[63:32]), (shift_reg_rsci_din[95:64]), (shift_reg_rsci_din[127:96]),
+      (shift_reg_rsci_din[159:128]), (shift_reg_rsci_din[191:160]), (shift_reg_rsci_din[223:192]),
+      (shift_reg_rsci_din[255:224]), (shift_reg_rsci_din[287:256]), (shift_reg_rsci_din[319:288]),
+      for_acc_1_cse_1_sva_1);
+  assign nl_for_acc_1_cse_1_sva_1 = i_3_0_sva + 4'b1111;
+  assign for_acc_1_cse_1_sva_1 = nl_for_acc_1_cse_1_sva_1[3:0];
+  assign for_equal_tmp_10 = (i_3_0_sva==4'b1010);
+  assign for_equal_tmp_11 = (i_3_0_sva==4'b1001);
+  assign for_equal_tmp_12 = (i_3_0_sva==4'b1000);
+  assign for_equal_tmp_13 = (i_3_0_sva==4'b0111);
+  assign for_equal_tmp_14 = (i_3_0_sva==4'b0110);
+  assign for_equal_tmp_15 = (i_3_0_sva==4'b0101);
+  assign for_equal_tmp_16 = (i_3_0_sva==4'b0100);
+  assign for_equal_tmp_17 = (i_3_0_sva==4'b0011);
+  assign for_equal_tmp_18 = (i_3_0_sva==4'b0010);
+  assign and_19_cse = (~ for_slc_for_acc_4_itm) & (fsm_output[3]);
+  always @(posedge clk) begin
+    if ( rst ) begin
+      return_rsci_idat <= 32'b00000000000000000000000000000000;
+    end
+    else if ( fsm_output[5] ) begin
+      return_rsci_idat <= z_out;
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      x_sva <= 32'b00000000000000000000000000000000;
+    end
+    else if ( fsm_output[0] ) begin
+      x_sva <= x_rsci_idat;
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      acc_2_sva <= 32'b00000000000000000000000000000000;
+    end
+    else if ( (fsm_output[0]) | (fsm_output[3]) ) begin
+      acc_2_sva <= MUX_v_32_2_2(32'b00000000000000000000000000000000, z_out, acc_not_2_nl);
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      i_3_0_sva <= 4'b0000;
+      return_rsc_triosy_obj_ld <= 1'b0;
+      reg_shift_reg_rsc_triosy_obj_ld_cse <= 1'b0;
+      for_slc_shift_reg_32_31_0_ncse_sva <= 32'b00000000000000000000000000000000;
+      for_slc_C_rom_1_for_slc_i_3_0_tmp_9_8_1_1_sva <= 8'b00000000;
+      for_slc_C_rom_1_for_slc_i_3_0_tmp_9_0_1_sva <= 1'b0;
+      reg_for_mul_cse <= 32'b00000000000000000000000000000000;
+    end
+    else begin
+      i_3_0_sva <= MUX_v_4_2_2(4'b1010, for_acc_1_cse_1_sva, fsm_output[3]);
+      return_rsc_triosy_obj_ld <= fsm_output[5];
+      reg_shift_reg_rsc_triosy_obj_ld_cse <= and_19_cse;
+      for_slc_shift_reg_32_31_0_ncse_sva <= for_slc_shift_reg_32_31_0_ncse_sva_1;
+      for_slc_C_rom_1_for_slc_i_3_0_tmp_9_8_1_1_sva <= ROM_1i4_1o8_3106bdac892fcba6b8e810136c5fc7fd2e_1;
+      for_slc_C_rom_1_for_slc_i_3_0_tmp_9_0_1_sva <= ROM_1i4_1o1_04cc3276c127ea0e308702c30762117d2e_1;
+      reg_for_mul_cse <= nl_reg_for_mul_cse[31:0];
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      for_slc_for_acc_4_itm <= 1'b0;
+    end
+    else if ( fsm_output[1] ) begin
+      for_slc_for_acc_4_itm <= readslicef_5_1_4(for_acc_nl);
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      for_acc_1_cse_1_sva <= 4'b0000;
+    end
+    else if ( fsm_output[1] ) begin
+      for_acc_1_cse_1_sva <= for_acc_1_cse_1_sva_1;
+    end
+  end
+  always @(posedge clk) begin
+    if ( rst ) begin
+      acc_2_sva_1 <= 32'b00000000000000000000000000000000;
+    end
+    else if ( fsm_output[3] ) begin
+      acc_2_sva_1 <= z_out;
+    end
+  end
+  assign acc_not_2_nl = ~ (fsm_output[0]);
+  assign for_mux_8_nl = MUX_v_8_2_2(for_slc_C_rom_1_for_slc_i_3_0_tmp_9_8_1_1_sva,
+      8'b00001101, fsm_output[4]);
+  assign for_for_or_1_nl = for_slc_C_rom_1_for_slc_i_3_0_tmp_9_0_1_sva | (fsm_output[4]);
+  assign for_mux_9_nl = MUX_v_32_2_2(for_slc_shift_reg_32_31_0_ncse_sva, x_sva, fsm_output[4]);
+  assign nl_reg_for_mul_cse  = $signed(({for_mux_8_nl , 1'b0 , for_for_or_1_nl}))
+      * $signed(conv_u2s_32_33(for_mux_9_nl));
+  assign nl_for_acc_nl = ({1'b1 , (~ for_acc_1_cse_1_sva_1)}) + 5'b00001;
+  assign for_acc_nl = nl_for_acc_nl[4:0];
+  assign mux_5_nl = MUX_v_32_2_2(acc_2_sva_1, acc_2_sva, fsm_output[3]);
+  assign nl_z_out = mux_5_nl + reg_for_mul_cse;
+  assign z_out = nl_z_out[31:0];
+
+  function automatic [319:0] MUX_v_320_2_2;
+    input [319:0] input_0;
+    input [319:0] input_1;
+    input [0:0] sel;
+    reg [319:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_320_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [31:0] MUX_v_32_10_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [31:0] input_2;
+    input [31:0] input_3;
+    input [31:0] input_4;
+    input [31:0] input_5;
+    input [31:0] input_6;
+    input [31:0] input_7;
+    input [31:0] input_8;
+    input [31:0] input_9;
+    input [3:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      4'b0000 : begin
+        result = input_0;
+      end
+      4'b0001 : begin
+        result = input_1;
+      end
+      4'b0010 : begin
+        result = input_2;
+      end
+      4'b0011 : begin
+        result = input_3;
+      end
+      4'b0100 : begin
+        result = input_4;
+      end
+      4'b0101 : begin
+        result = input_5;
+      end
+      4'b0110 : begin
+        result = input_6;
+      end
+      4'b0111 : begin
+        result = input_7;
+      end
+      4'b1000 : begin
+        result = input_8;
+      end
+      default : begin
+        result = input_9;
+      end
+    endcase
+    MUX_v_32_10_2 = result;
+  end
+  endfunction
+
+
+  function automatic [31:0] MUX_v_32_2_2;
+    input [31:0] input_0;
+    input [31:0] input_1;
+    input [0:0] sel;
+    reg [31:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_32_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [3:0] MUX_v_4_2_2;
+    input [3:0] input_0;
+    input [3:0] input_1;
+    input [0:0] sel;
+    reg [3:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_4_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [7:0] MUX_v_8_2_2;
+    input [7:0] input_0;
+    input [7:0] input_1;
+    input [0:0] sel;
+    reg [7:0] result;
+  begin
+    case (sel)
+      1'b0 : begin
+        result = input_0;
+      end
+      default : begin
+        result = input_1;
+      end
+    endcase
+    MUX_v_8_2_2 = result;
+  end
+  endfunction
+
+
+  function automatic [0:0] readslicef_5_1_4;
+    input [4:0] vector;
+    reg [4:0] tmp;
+  begin
+    tmp = vector >> 4;
+    readslicef_5_1_4 = tmp[0:0];
+  end
+  endfunction
+
+
+  function automatic [32:0] conv_u2s_32_33 ;
+    input [31:0]  vector ;
+  begin
+    conv_u2s_32_33 =  {1'b0, vector};
+  end
+  endfunction
+
+endmodule
+
+// ------------------------------------------------------------------
+//  Design Unit:    fir1
+// ------------------------------------------------------------------
+
+
+module fir1 (
+  clk, rst, x_rsc_dat, x_rsc_triosy_lz, shift_reg_rsc_zout, shift_reg_rsc_lzout,
+      shift_reg_rsc_zin, shift_reg_rsc_triosy_lz, return_rsc_dat, return_rsc_triosy_lz
+);
+  input clk;
+  input rst;
+  input [31:0] x_rsc_dat;
+  output x_rsc_triosy_lz;
+  output [351:0] shift_reg_rsc_zout;
+  output shift_reg_rsc_lzout;
+  input [351:0] shift_reg_rsc_zin;
+  output shift_reg_rsc_triosy_lz;
+  output [31:0] return_rsc_dat;
+  output return_rsc_triosy_lz;
+
+
+
+  // Interconnect Declarations for Component Instantiations 
+  fir1_core fir1_core_inst (
+      .clk(clk),
+      .rst(rst),
+      .x_rsc_dat(x_rsc_dat),
+      .x_rsc_triosy_lz(x_rsc_triosy_lz),
+      .shift_reg_rsc_zout(shift_reg_rsc_zout),
+      .shift_reg_rsc_lzout(shift_reg_rsc_lzout),
+      .shift_reg_rsc_zin(shift_reg_rsc_zin),
+      .shift_reg_rsc_triosy_lz(shift_reg_rsc_triosy_lz),
+      .return_rsc_dat(return_rsc_dat),
+      .return_rsc_triosy_lz(return_rsc_triosy_lz)
+    );
+endmodule
+
+
+

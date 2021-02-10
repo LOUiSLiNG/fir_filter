@@ -1,0 +1,211 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/dss545/small_projects/fir_filter/fir_filter/fir_filter/fir2.v2
+vccs_in_v1
+Z1 !s110 1612912707
+!i10b 1
+!s100 ^:KaRnY5dRJ=6^_aKjV`F3
+IRdgI=iLn1?;KiTPm=AU4b3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1612912703
+Z4 8concat_sim_rtl.v
+Z5 Fconcat_sim_rtl.v
+L0 21
+Z6 OL;L;10.6;65
+r1
+!s85 0
+31
+Z7 !s108 1612912707.000000
+Z8 !s107 concat_sim_rtl.v|
+Z9 !s90 -work|work|concat_sim_rtl.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vccs_out_v1
+R1
+!i10b 1
+!s100 65O_@=T`Nh83dh^d3:V2o1
+IX1B6699ndOKP]=AnG<]>U0
+R2
+R0
+R3
+R4
+R5
+L0 98
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vfir2
+R1
+!i10b 1
+!s100 nDQoTeDB3E9Ea;`_]]XkT3
+IASE:WBUm0_`nUZ<<cK_nP3
+R2
+R0
+R3
+R4
+R5
+L0 816
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vfir2_core
+R1
+!i10b 1
+!s100 <=BP;i4C;5Aln7HjzeXL_2
+IUY`K6QNXnlKXmX474k;9R2
+R2
+R0
+R3
+R4
+R5
+L0 412
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vfir2_core_core_fsm
+R1
+!i10b 1
+!s100 3=2:94[[<`XU9FcALfW9E0
+I6m4:8dX6C=XP]bYIL17IR0
+R2
+R0
+R3
+R4
+R5
+L0 331
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vmgc_inout_prereg_en_v1
+R1
+!i10b 1
+!s100 1nF3KgcNc1IUb8ebfh:I[3
+IMg6Cf=Rc<VAgcC?0`c5@60
+R2
+R0
+R3
+R4
+R5
+L0 55
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vmgc_io_sync_v2
+R1
+!i10b 1
+!s100 V_?iT8?7O9MBbTP95<K:F3
+IzRC_[^09zGmjEi;8>=oS83
+R2
+R0
+R3
+R4
+R5
+L0 134
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+vROM_1i4_1o1_a981173f914bc276eca7f42d28616f0ab2
+R1
+!i10b 1
+!s100 SK0h=7ZlgENZXLaYP[gM62
+I@aXd>kQeidD2zbe[:]fBn2
+R2
+R0
+R3
+R4
+R5
+L0 247
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+n@r@o@m_1i4_1o1_a981173f914bc276eca7f42d28616f0ab2
+vROM_1i4_1o8_67a60b90ba118081e4925479fe39390ab2
+R1
+!i10b 1
+!s100 @2_JI<XG4I=lK49lc3eA>0
+ID0BEC6V`Nd66aZ9i42@EJ2
+R2
+R0
+R3
+R4
+R5
+L0 163
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+n@r@o@m_1i4_1o8_67a60b90ba118081e4925479fe39390ab2
+sscverify_top
+R0
+Tscverify_top_opt
+!s110 1612912729
+VNVM8NU0PRFU3]<]T8LkFP0
+04 12 0 work scverify_top 0
+o+acc=npr -L ./fir_filter/fir2.v2/scverify/concat_sim_rtl_v_msim/work
+R11
+nscverify_top_opt
+OL;O;10.6;65

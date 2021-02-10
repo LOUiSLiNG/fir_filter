@@ -1,0 +1,6 @@
+clk 1 bit bool
+rst 1 bit sc_logic
+x_rsc_dat 32 bit_vector sc_lv
+x_rsc_triosy_lz 1 bit sc_logic
+return_rsc_dat 32 bit_vector sc_lv
+return_rsc_triosy_lz 1 bit sc_logic
